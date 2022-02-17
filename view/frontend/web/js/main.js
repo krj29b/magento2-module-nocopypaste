@@ -12,7 +12,14 @@ require(['jquery'], function ($) {
         } else if (event.keyCode === 123 || event.keyCode === 91 || event.keyCode === 93) {
             // Disable F12 || Windows Key and Command Key
             event.preventDefault();
+        } else if (event.shiftKey) {
+
+            if (event.keyCode >= 116 && event.keyCode <= 123) {
+                 // Disable SHIFT+F6 to F12
+                 event.preventDefault();
+            }
         }
+         
     });
 
 
